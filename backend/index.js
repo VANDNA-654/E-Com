@@ -11,7 +11,9 @@ app.use(express.json());
 app.use(cors());
 
 //Database connection with MongoDB
-mongoose.connect("mongodb+srv://rohansharma0908:jpddpj@cluster0.ycmphrz.mongodb.net/e-commerce")
+// mongoose.connect("mongodb+srv://rohansharma0908:jpddpj@cluster0.ycmphrz.mongodb.net/e-commerce")+
+mongoose.connect("mongodb+srv://newuser01:QBaG-5Qh8zjrcPg@cluster0.7ecefhb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/e-comdb")
++
 
 //API creation
 
@@ -233,7 +235,7 @@ const fetchUser = async (req, res, next) => {
         }
     }
 }
-
+ 
 // Creating endpoint for adding products in cartdata
 app.post('/addtocart', fetchUser, async (req, res) => {
     console.log("Added", req.body.itemId);
